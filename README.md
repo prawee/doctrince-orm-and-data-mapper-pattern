@@ -50,3 +50,9 @@ Updating database schema...
 3 queries were executed                                                                                                    
 [OK] Database schema updated successfully! 
 ```
+
+## Running
+
+```bash
+php -S localhost:8080
+```
