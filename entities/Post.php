@@ -35,6 +35,13 @@ class Post
      * @Column(type="datetime")
      */
     private $date;
+    /**
+     * Many posts belong to one author
+     * @ManyToOne(targetEntity="Author", inversedBy="posts")
+     * @JoinColumn(name="author_id", referencedColumnName="id", nullable=false)
+     * @var Author
+     */
+    private $author;
 
     /**
      * Get id.
@@ -116,5 +123,29 @@ class Post
     public function getDate()
     {
         return $this->date;
+    }
+
+    /**
+     * Set author.
+     *
+     * @param \entities\Author $author
+     *
+     * @return Post
+     */
+    public function setAuthor(\entities\Author $author)
+    {
+        $this->author = $author;
+
+        return $this;
+    }
+
+    /**
+     * Get author.
+     *
+     * @return \entities\Author
+     */
+    public function getAuthor()
+    {
+        return $this->author;
     }
 }

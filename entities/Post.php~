@@ -35,6 +35,13 @@ class Post
      * @Column(type="datetime")
      */
     private $date;
+    /**
+     * Many posts belong to one author
+     * @ManyToOne(targetEntity="Author", inversedBy="posts")
+     * @JoinColumn(name="author_id", referencedColumnName="id", nullable=false)
+     * @var Author
+     */
+    private $author;
 
     /**
      * Get id.

@@ -27,7 +27,7 @@ Found 2 mapped entities:
 [OK]   entities\Author
 ```
 
-### Generate entities
+### Generate entities (Getter and Setter)
 
 ```bash
 php vendor/bin/doctrine orm:generate-entities .

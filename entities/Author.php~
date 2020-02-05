@@ -8,6 +8,8 @@
  */
 namespace entities;
 
+use Doctrine\Common\Collections\ArrayCollection;
+
 /**
  * Class Author
  * @package entities
@@ -30,6 +32,12 @@ class Author
      * @Column(type="string")
      */
     private $last_name;
+    /**
+     * One author can write many post
+     * @OneToMany(targetEntity="Post", mappedBy="author", cascade={"all"})
+     * @var ArrayCollection
+     */
+    private $posts;
 
     /**
      * Get id.
