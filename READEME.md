@@ -38,3 +38,15 @@ Processing entity "entities\Post"
 Processing entity "entities\Author"                                                                                                    
 [OK] Entity classes generated to "/private/var/www/doctrine"
 ```
+
+## Generate db schema
+
+```bash
+php vendor/bin/doctrine orm:schema-tool:update --force
+```
+
+```bash
+Updating database schema...
+3 queries were executed                                                                                                    
+[OK] Database schema updated successfully! 
+```
